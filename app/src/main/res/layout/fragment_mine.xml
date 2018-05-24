@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="#faf9fa"
+        android:orientation="vertical"
+        >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/invite_facebook"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#e2e3e3" />
+
+    // 프로필 영역
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="108dp"
+            android:layout_height="match_parent"
+            >
+
+            // 피카츄(나) 이미지
+            <RelativeLayout
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginLeft="32dp"
+                >
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/pic1"
+                        />
+
+                    // 피카츄 위에 겹쳐지는 + 이미지
+                    <ImageView
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:src="#5495e9"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        />
+                </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="sxdam.e"
+                        android:textSize="14sp"
+                        android:textColor="#000000"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginLeft="38dp"
+                        />
+
+            </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:orientation="vertical"
+            android:layout_marginLeft="24dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <TextView
+                    android:id="@+id/profile_msg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="게시물"
+                    android:textColor="#000000"
+                    android:textSize="14sp"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="16dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="165"
+                    android:textSize="12sp"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginLeft="26dp"
+                    />
+
+                <TextView
+                    android:id="@+id/profile_follower"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="팔로워"
+                    android:textColor="#000000"
+                    android:textSize="14sp"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="46dp"
+                    android:layout_toRightOf="@+id/profile_msg"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="165"
+                    android:textSize="12sp"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginLeft="56dp"
+                    android:layout_toRightOf="@+id/profile_msg"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="팔로잉"
+                    android:textColor="#000000"
+                    android:textSize="14sp"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="46dp"
+                    android:layout_toRightOf="@+id/profile_follower"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="165"
+                    android:textSize="12sp"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginLeft="56dp"
+                    android:layout_toRightOf="@+id/profile_follower"
+                    />
+
+            </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="프로필 수정"
+                    android:textColor="#000000"
+                    android:layout_marginLeft="84dp"
+                    android:layout_marginTop="3dp"
+                    android:textSize="14sp"/>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#e2e3e3" />
+
+    // 인스타그램 탭바
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:orientation="horizontal"
+        android:background="#faf9fa"
+        >
+
+        <ImageView
+            android:id="@+id/mine_tab_feed"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_weight="1"
+            android:src="@drawable/my_all_on"
+            />
+
+        <ImageView
+            android:id="@+id/mine_tab_list"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_weight="1"
+            android:src="@drawable/my_align_off"
+            tools:onClick="ChangeFragment" />
+
+        <ImageView
+            android:id="@+id/mine_tab_tag"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_weight="1"
+            android:src="@drawable/my_tag_off"
+            />
+
+        <ImageView
+            android:id="@+id/mine_tab_bookmark"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_weight="1"
+            android:src="@drawable/my_save_off"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:orientation="horizontal"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="150dp"
+                android:layout_weight="1"
+                android:background="@drawable/pic1"/>
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="150dp"
+                android:layout_weight="1"
+                android:background="@drawable/pic2"/>
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="150dp"
+                android:layout_weight="1"
+                android:background="@drawable/pic3"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:orientation="horizontal"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="150dp"
+                android:layout_weight="1"
+                android:background="@drawable/pic4"/>
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="150dp"
+                android:layout_weight="1"
+                android:background="@drawable/pikapika"/>
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="150dp"
+                android:layout_weight="1"
+                android:background="@drawable/pic3"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>
