@@ -9,7 +9,7 @@ import android.widget.ImageView
 import kotlinx.android.synthetic.main.fragment_mine.*
 
 class MineTab : Fragment() {
-    // Instagram Fragment
+    // 마이 페이지
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val v = inflater.inflate(R.layout.fragment_mine, container, false)
 

@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 
 class SearchTab : Fragment() {
-    // search Fragment
+    // 돋보기 화면이네용
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val v= inflater.inflate(R.layout.fragment_search,container,false)
         return v

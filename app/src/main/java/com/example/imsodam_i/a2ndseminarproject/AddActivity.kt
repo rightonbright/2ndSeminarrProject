@@ -10,7 +10,6 @@ class AddActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
 
         var image : Int = 0
-        // int name = 0
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add)
