@@ -14,8 +14,6 @@
         android:layout_above="@+id/main_tab"
         android:id="@+id/main_frame"
         >
-
-
     </FrameLayout>
 
 

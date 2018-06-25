@@ -41,11 +41,6 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 main_btn_mine.isSelected = true
                 replaceFragment(MineTab())
             }
-            mine_btn_list -> {
-                clearSelected()
-                main_btn_mine.isSelected = true
-                replaceFragment(MineTab())
-            }
         }
 
     }
@@ -57,18 +52,11 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         // = addFragment(new HomeTab())
         main_btn_home.isSelected = true
 
-        // 피드 뷰
         main_btn_home.setOnClickListener(this)
-        // 개인 인스타그램 뷰
         main_btn_mine.setOnClickListener(this)
-        // 사진 업로드 뷰
         main_btn_add.setOnClickListener(this)
-        // 화면 추가 2018. 04. 07
         btn_main_search.setOnClickListener(this)
         btn_main_news.setOnClickListener(this)
-
-        val mine_btn_list = findViewById(R.id.mine_tab_list) as ImageView
-        mine_btn_list.setOnClickListener(this)
     }
 
     fun addFragment(fragment : Fragment) {
@@ -96,7 +84,6 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         main_btn_mine.isSelected = false
         btn_main_search.isSelected = false
         btn_main_news.isSelected = false
-        // 나의 페이지 추가 2018. 04. 09
     }
 
 }
