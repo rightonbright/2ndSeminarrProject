@@ -2,7 +2,7 @@ package com.example.imsodam_i.a2ndseminarproject
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import kotlinx.android.synthetic.main.activity_add.*
+import kotlinx.android.synthetic.main.activity_save.*
 
 class SaveActivity : AppCompatActivity() {
 
@@ -14,6 +14,6 @@ class SaveActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_save)
         image = intent.getIntExtra("save_image", 0 )
-        add_image.setImageResource(image)
+        save_image.setImageResource(image)
     }
 }

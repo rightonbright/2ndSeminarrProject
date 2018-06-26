@@ -69,7 +69,7 @@ class MineTab : Fragment(), View.OnClickListener {
         transaction.commit()
     }
 
-    fun clearSelected(){
+    fun clearSelected() {
         mine_tab_all.isSelected = false
         mine_tab_align.isSelected = false
         mine_tab_tag.isSelected = false
