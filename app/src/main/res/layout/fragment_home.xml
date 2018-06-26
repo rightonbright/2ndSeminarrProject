@@ -131,7 +131,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="sxdam.e"
+                    android:text="sihyun.e"
                     android:textSize="8sp"
                     android:textColor="#000000"
                     android:layout_centerHorizontal="true"
@@ -296,7 +296,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="sxdam.e"
+                    android:text="sihyun.e"
                     android:textColor="#000000"
                     android:textSize="12sp"
                     android:layout_toRightOf="@+id/image_profile"
