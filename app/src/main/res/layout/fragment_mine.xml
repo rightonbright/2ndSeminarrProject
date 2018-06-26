@@ -176,20 +176,20 @@
         >
 
         <ImageView
-            android:id="@+id/mine_tab_feed"
+            android:id="@+id/mine_tab_all"
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:layout_weight="1"
-            android:src="@drawable/my_all_on"
+            android:src="@drawable/my_all_off"
             />
 
         <ImageView
-            android:id="@+id/mine_tab_list"
+            android:id="@+id/mine_tab_align"
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:layout_weight="1"
             android:src="@drawable/my_align_off"
-            tools:onClick="ChangeFragment" />
+            />
 
         <ImageView
             android:id="@+id/mine_tab_tag"
@@ -200,7 +200,7 @@
             />
 
         <ImageView
-            android:id="@+id/mine_tab_bookmark"
+            android:id="@+id/mine_tab_save"
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:layout_weight="1"
@@ -209,65 +209,14 @@
 
     </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/mine_fragment"
+
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:orientation="horizontal"
-            android:layout_weight="1">
-
-            <ImageView
-                android:layout_width="50dp"
-                android:layout_height="150dp"
-                android:layout_weight="1"
-                android:background="@drawable/pic1"/>
-
-            <ImageView
-                android:layout_width="50dp"
-                android:layout_height="150dp"
-                android:layout_weight="1"
-                android:background="@drawable/pic2"/>
-
-            <ImageView
-                android:layout_width="50dp"
-                android:layout_height="150dp"
-                android:layout_weight="1"
-                android:background="@drawable/pic3"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:orientation="horizontal"
-            android:layout_weight="1">
-
-            <ImageView
-                android:layout_width="50dp"
-                android:layout_height="150dp"
-                android:layout_weight="1"
-                android:background="@drawable/pic4"/>
-
-            <ImageView
-                android:layout_width="50dp"
-                android:layout_height="150dp"
-                android:layout_weight="1"
-                android:background="@drawable/pikapika"/>
-
-            <ImageView
-                android:layout_width="50dp"
-                android:layout_height="150dp"
-                android:layout_weight="1"
-                android:background="@drawable/pic3"/>
-
-        </LinearLayout>
-
-    </LinearLayout>
+        android:layout_above="@+id/main_tab"
+        android:id="@+id/mine_frame"
+        >
+    </FrameLayout>
 
 
 </LinearLayout>

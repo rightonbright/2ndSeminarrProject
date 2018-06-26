@@ -16,53 +16,63 @@ class MineTab : Fragment(), View.OnClickListener {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val v = inflater.inflate(R.layout.fragment_mine, container, false)
 
-        v.mine_tab_feed.setOnClickListener(this)
-        v.mine_tab_list.setOnClickListener(this)
+        addFragment(FeedTab())
+        v.mine_tab_all.isSelected = true
+
+        v.mine_tab_all.setOnClickListener(this)
+        v.mine_tab_align.setOnClickListener(this)
         v.mine_tab_tag.setOnClickListener(this)
-        v.mine_tab_bookmark.setOnClickListener(this)
+        v.mine_tab_save.setOnClickListener(this)
 
         return v
     }
 
     override fun onClick(v: View?) {
         when(v) {
-            mine_tab_feed -> {
+            mine_tab_all -> {
                 clearSelected()
-                mine_tab_feed.isSelected = true
+                mine_tab_all.isSelected = true
+                replaceFragment(FeedTab())
             }
-            mine_tab_list -> {
+            mine_tab_align -> {
                 clearSelected()
-                mine_tab_list.isSelected = true
+                mine_tab_align.isSelected = true
                 replaceFragment(NewsTab())
-                // Toast.makeText(activity!!.applicationContext, "Click Success", Toast.LENGTH_SHORT).show()
             }
             mine_tab_tag -> {
                 clearSelected()
                 mine_tab_tag.isSelected = true
                 replaceFragment(SearchTab())
             }
-            mine_tab_bookmark -> {
+            mine_tab_save -> {
                 clearSelected()
-                mine_tab_bookmark.isSelected = true
-                val intent = Intent(activity!!.applicationContext, AddActivity::class.java)
-                intent.putExtra("add_image", R.drawable.add_image)
+                mine_tab_save.isSelected = true
+//                val intent = Intent(activity!!.applicationContext, AddActivity::class.java)
+//                intent.putExtra("add_image", R.drawable.add_image)
+//                startActivity(intent)
             }
         }
 
     }
 
+    fun addFragment(fragment : Fragment) {
+        val fm = activity!!.supportFragmentManager
+        val transaction = fm.beginTransaction()
+        transaction.add(R.id.mine_frame, fragment)
+        transaction.commit()
+    }
+
     fun replaceFragment(fragment: Fragment) {
         val fm = activity!!.supportFragmentManager
         val transaction = fm.beginTransaction()
-
-        transaction.replace(R.id.mine_fragment, fragment)
+        transaction.replace(R.id.mine_frame, fragment)
         transaction.commit()
     }
 
     fun clearSelected(){
-        mine_tab_feed.isSelected = false
-        mine_tab_list.isSelected = false
+        mine_tab_all.isSelected = false
+        mine_tab_align.isSelected = false
         mine_tab_tag.isSelected = false
-        mine_tab_bookmark.isSelected = false
+        mine_tab_save.isSelected = false
     }
 }
