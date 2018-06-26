@@ -47,9 +47,9 @@ class MineTab : Fragment(), View.OnClickListener {
             mine_tab_save -> {
                 clearSelected()
                 mine_tab_save.isSelected = true
-//                val intent = Intent(activity!!.applicationContext, AddActivity::class.java)
-//                intent.putExtra("add_image", R.drawable.add_image)
-//                startActivity(intent)
+                val intent = Intent(activity!!.applicationContext, SaveActivity::class.java)
+                intent.putExtra("save_image", R.drawable.my_save_off)
+                startActivity(intent)
             }
         }
 
